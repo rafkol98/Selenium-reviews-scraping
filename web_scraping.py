@@ -1,4 +1,7 @@
-# Scrapes reviews for a company from trustpilot.com using selenium and beautiful soup.
+# Scrapes reviews for a company (Valda energy) from trustpilot.com using selenium and beautiful soup.
+# The reviews are stored in a csv file. Uses sentiment analysis to classify the reviews as positive or negative.
+
+# import libraries
 from selenium import webdriver
 from bs4 import BeautifulSoup
 import pandas as pd
@@ -74,7 +77,6 @@ with open("scraped_reviews.csv", "w", newline="") as csvfile:
     writer.writerows(all_reviews)
 
 
-# Close the driver.
-driver.close()
-
+# Quit the driver.
 driver.quit()
+
